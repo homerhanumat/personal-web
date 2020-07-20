@@ -1,7 +1,8 @@
+{{ $image_link := (print "portfolio/" .Params.Thumbnail) |  relURL }}
 <div class="portfolio-list">
   <a href="{{.Permalink}}">
     <div class="portfolio-container">
-      <img title="{{.Title}}" alt="{{.Title}}" src="/portfolio/{{ .Params.Thumbnail }}" />
+      <img title="{{.Title}}" alt="{{.Title}}" src="{{ $image_link }}" />
       <div class="img-overlay">
       </div>
       <div class="portfolio-details">
